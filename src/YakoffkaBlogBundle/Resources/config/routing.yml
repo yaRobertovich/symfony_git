@@ -1,0 +1,3 @@
+yakoffka_blog_homepage:
+    path:     /
+    defaults: { _controller: YakoffkaBlogBundle:Default:index }
