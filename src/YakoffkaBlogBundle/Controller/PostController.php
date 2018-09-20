@@ -62,7 +62,7 @@ class PostController extends Controller
     /**
      * Finds and displays a Post entity.
      *
-     * @Route("/{id}", name="post_show")
+     * @Route("/{id}/show", name="post_show")
      * @Method("GET")
      */
     public function showAction(Post $post)
@@ -105,7 +105,7 @@ class PostController extends Controller
     /**
      * Deletes a Post entity.
      *
-     * @Route("/{id}", name="post_delete")
+     * @Route("/{id}/delete", name="post_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Post $post)

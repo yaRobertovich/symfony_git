@@ -2,16 +2,42 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Blog on Bootstrap{% endblock %}</title>
         {% block stylesheets %}
           {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
-              <link rel="stylesheet" href="{{ asset_url }}" />
+            <link rel="stylesheet" href="{{ asset_url }}" />
           {% endstylesheets %}
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+      <div class="blog-masthead">
+        <div class="container">
+          <nav class="blog-nav">
+            <a class="blog-nav-item active" href="#">Home</a>
+            <a class="blog-nav-item" href="#">New features</a>
+            <a class="blog-nav-item" href="#">Press</a>
+            <a class="blog-nav-item" href="#">New hires</a>
+            <a class="blog-nav-item" href="#">About</a>
+          </nav>
+        </div>
+      </div>
+      <div class="container">
+
+        <div class="blog-header">
+          <h1 class="blog-title">The Bootstrap Blog</h1>
+          <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+        </div>
+
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+      </div>
+      <div class="blog-footer">
+        <p>блог создан с использованием <a href="https://symfony.com/">Symfony</a> и <a href="http://getbootstrap.com">Bootstrap</a></p>
+      </div>
     </body>
 </html>
