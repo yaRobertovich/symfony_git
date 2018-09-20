@@ -1,14 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Post edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+  <h1>редактирование поста</h1>
 
-    <ul>
+    {% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+      {{ form_start(edit_form) }}
+          {{ form_widget(edit_form) }}
+          <!--input type="submit" value="Create" /-->
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-success">создать</button> <a href="{{ path('post_index') }}"><button class="btn btn-danger">отмена</button></a>
+              </div>
+          </div>
+      {{ form_end(edit_form) }}
+
+    <!--ul>
         <li>
             <a href="{{ path('post_index') }}">Back to the list</a>
         </li>
@@ -17,5 +25,5 @@
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
-    </ul>
+    </ul-->
 {% endblock %}

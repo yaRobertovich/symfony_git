@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Post list</h1>
+    <h1>Post list</h1>index.html.twig
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -31,11 +31,11 @@
                 <td>{{ post.source }}</td>
                 <td>{{ post.linkSource }}</td>
                 <td>
-                    <ul>
-                        <li>
+                    <ul class="list-group">
+                        <li class="list-group-item">
                             <a href="{{ path('post_show', { 'id': post.id }) }}">show</a>
                         </li>
-                        <li>
+                        <li class="list-group-item">
                             <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
                         </li>
                     </ul>
@@ -45,9 +45,9 @@
         </tbody>
     </table>
 
-    <ul>
+    <!--ul>
         <li>
             <a href="{{ path('post_new') }}">Create a new entry</a>
         </li>
-    </ul>
+    </ul-->
 {% endblock %}
