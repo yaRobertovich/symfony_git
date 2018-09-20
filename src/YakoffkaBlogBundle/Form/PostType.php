@@ -22,7 +22,7 @@ class PostType extends AbstractType
             // ->add('editDate', 'datetime')
             // ->add('author')
             // ->add('source')
-            // ->add('linkSource')
+            // ->add('linkSource') 
             // ошибка Could not load type "datetime"
             // https://stackoverflow.com/questions/34929878/symfony-crud-edict-could-not-load-type-datetime
 
