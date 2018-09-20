@@ -1,3 +1,7 @@
+yakoffka_blog_post:
+    resource: "@YakoffkaBlogBundle/Controller/PostController.php"
+    type:     annotation
+
 yakoffka_blog:
     resource: "@YakoffkaBlogBundle/Resources/config/routing.yml"
     prefix:   /
