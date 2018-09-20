@@ -15,17 +15,28 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            // ->add('title')
+            // ->add('description')
+            // ->add('content')
+            // ->add('createdDate', 'datetime')
+            // ->add('editDate', 'datetime')
+            // ->add('author')
+            // ->add('source')
+            // ->add('linkSource')
+            // ошибка Could not load type "datetime"
+            // https://stackoverflow.com/questions/34929878/symfony-crud-edict-could-not-load-type-datetime
+
             ->add('title')
             ->add('description')
             ->add('content')
-            ->add('createdDate', 'datetime')
-            ->add('editDate', 'datetime')
+            ->add('createdDate')
+            ->add('editDate')
             ->add('author')
             ->add('source')
             ->add('linkSource')
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */
