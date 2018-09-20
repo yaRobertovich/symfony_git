@@ -33,3 +33,8 @@ monolog:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+
+#шаг четвертый
+assetic:
+    use_controller: false

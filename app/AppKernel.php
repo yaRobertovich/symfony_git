@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new YakoffkaBlogBundle\YakoffkaBlogBundle(),
+				    new Symfony\Bundle\AsseticBundle\AsseticBundle(),// прописал вручную см.https://symfony.com/doc/3.3/frontend/assetic/asset_management.html шаг второй
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
